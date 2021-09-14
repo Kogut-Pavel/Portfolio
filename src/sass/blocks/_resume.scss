@@ -1,0 +1,94 @@
+.resume {
+    padding-top: 120px;
+    .tac {
+        text-align: center;
+    }
+    &__title {
+        position: relative;
+        @include before_circle;
+        &::before {
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__wrapper {
+        padding: 60px 65px 0 65px;
+        display: grid;
+        grid-template-columns: repeat(2, 425px);
+        column-gap: 135px;
+    }
+    &__column {
+        &-title {
+            text-align: left;
+            position: relative;
+            padding-left: 43px;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 15px;
+                height: 15px;
+                background-color: $main-color;
+                border-radius: 100%;
+            }
+        }
+        .title {
+            margin-bottom: 0;
+        }
+        ul {
+            list-style-type: none;
+            li {
+                position: relative;
+                &::after {
+                    content: '';
+                    width: 1px;
+                    height: calc(100% + 16px);
+                    position: absolute;
+                    top: -8px;
+                    left: 7px;
+                    background-color: #000;
+                }
+            }
+        }
+    }
+    &__item {
+        position: relative;
+        &::before {
+            content: '';
+            height: 1px;
+            width: 38px;
+            position: absolute;
+            top: 68px;
+            left: 7px;
+            background-color: #000;
+        }
+        &-head {
+            padding: 45px 0 0 100px;
+            position: relative;
+        }
+        &-icon {
+            position: absolute;
+            top: 50px;
+            left: 45px;
+            @include before_circle;
+            img {
+                position: absolute;
+                top: 15px;
+                left: 16px;
+            }
+        }
+        &-location {
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &-body {
+            padding-left: 45px;
+            margin-top: 12px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+}
