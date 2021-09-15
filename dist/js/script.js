@@ -24,3 +24,12 @@ document.addEventListener("keydown", (e) => {
         hamburger.classList.remove('active');
     }
 });
+
+// percent progress bar
+
+const counters = document.querySelectorAll('.skills__ratings-counter');
+const lines = document.querySelectorAll('.skills__ratings-line span');
+
+counters.forEach((item, i) => {
+    lines[i].style.width = item.innerHTML;
+});
