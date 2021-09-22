@@ -1,0 +1,227 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.eot");
+  src: url("../fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Roboto-Bold.woff") format("woff"),
+    url("../fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Light.eot");
+  src: url("../fonts/Roboto-Light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Roboto-Light.woff") format("woff"),
+    url("../fonts/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.eot");
+  src: url("../fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Roboto-Regular.woff") format("woff"),
+    url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  position: relative;
+}
+
+nav {
+  background: #212121;
+  height: 52px;
+  padding: 10px 70px;
+  margin: 0;
+}
+
+.site-navigation {
+  list-style: none;
+  padding: 0;
+}
+
+.site-navigation-item a {
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.site-navigation-item {
+  border-right: 1px dotted black;
+  padding-right: 32px;
+}
+
+.subheader {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 84px;
+  position: absolute;
+  width: 100%;
+}
+
+.subheader-logo {
+  max-width: 100%;
+  margin-top: 16px;
+}
+
+.subheader-text {
+  font-weight: 200;
+  font-size: 13px;
+  color: #fff;
+  opacity: 0.5;
+}
+
+.subheader-call {
+  font-weight: 300;
+  font-size: 12px;
+  color: #ffffff;
+  margin-top: 21px;
+  text-align: right;
+}
+
+.subheader-phone {
+  display: block;
+  text-align: right;
+  font-weight: normal;
+  font-size: 22px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.subheader-btn {
+  background: linear-gradient(0deg, #1eacc7 0%, #4ce2ff 100%);
+  box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  width: 172px;
+  height: 46px;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21);
+  margin-top: 19px;
+  font-weight: 400;
+}
+
+.promo {
+  min-height: 800px;
+  background: url('../img/uber_bg.jpg') center center/cover no-repeat;
+  padding: 150px 0 180px 0;
+}
+
+.promo-title {
+  font-weight: 700;
+  font-size: 60px;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 60px;
+  margin: 0;
+  text-align: center;
+}
+
+.promo-subtitle {
+  font-weight: 700;
+  font-size: 36px;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 36px;
+  margin-top: 22px;
+  text-align: center;
+}
+
+.promo-descr {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 23px;
+}
+
+.promo-btn {
+  width: 259px;
+  height: 63px;
+  background: linear-gradient(0deg, #1eacc7 0%, #4ce2ff 100%);
+  box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  display: block;
+  font-size: 18px;
+  line-height: 63px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
+  border: none;
+  margin: 116px auto 0 auto;
+}
+
+.features {
+  padding: 20px 0 64px 0;
+}
+
+.title-wrapper {
+  background-color: #000;
+  width: 115px;
+  height: 27px;
+  text-align: center;
+  vertical-align: center;
+  margin: 0 auto;
+}
+
+.features-title {
+  display: inline;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.features-subtitle {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 48px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #222222;
+  margin: 32px 0 16px 0;
+}
+
+.features-circle {
+  background: #1eacc7;
+  width: 116px;
+  height: 116px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 25px 0 33px;
+}
+
+.features-icon {
+  vertical-align: center;
+  text-align: center;
+}
+
+.features-content {
+  max-width: 360px;
+}
+
+.features-content-title {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+  color: #1eacc7;
+}
+
+.features-content-text {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 21px;
+  color: #202020;
+}

@@ -3,15 +3,6 @@
     .tac {
         text-align: center;
     }
-    &__title {
-        position: relative;
-        @include before_circle;
-        &::before {
-            top: -5px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    }
     &__wrapper {
         padding: 60px 65px 0 65px;
         display: grid;

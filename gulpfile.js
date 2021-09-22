@@ -12,9 +12,12 @@ gulp.task('server', function() {
 
     browserSync({
         server: {
-            baseDir: "dist"
+            baseDir: "./dist/",
+            serveStaticOptions: {
+            extensions: ["html"]
         }
-    });
+    },
+});
 
     gulp.watch("src/*.html").on('change', browserSync.reload);
 });
