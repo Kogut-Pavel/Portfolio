@@ -1,7 +1,7 @@
 .price {
     padding-top: 60px;
     &__wrapper {
-        margin: 60px 50px 0 50px;
+        padding: 60px 50px 0 50px;
         display: grid;
         grid-template: repeat(3, minmax(45px, auto)) / repeat(2, 350px);
         grid-auto-rows: minmax(45px, auto);
