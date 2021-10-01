@@ -6,8 +6,8 @@
     &__wrapper {
         padding: 60px 65px 0 65px;
         display: grid;
-        grid-template-columns: repeat(2, 425px);
-        column-gap: 135px;
+        grid-template-columns: repeat(2, 440px);
+        column-gap: 130px;
     }
     &__column {
         &-title {
@@ -83,3 +83,40 @@
         }
     }
 }
+
+.carousel {
+    &__inner {
+        position: relative;
+        img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            margin: 0 auto;
+        }
+    }
+    .slick-dots { // Стилизуем точки(dots) у слайдера, класс задали через js
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        list-style: none;
+        font-size: 0;
+        button {
+            background: #D0D0D0;
+            border: none;
+            border-radius: 50%;
+            height: 16px;
+            width: 16px;
+            margin: 5px;
+            outline: none;
+        }
+    }
+    .slick-dots li[class="slick-active"] button {
+        background: $main-color;
+    }
+    .slick-dots li {
+        &::after {
+            display: none;
+        }
+    }
+}
+

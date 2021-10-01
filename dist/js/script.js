@@ -37,44 +37,55 @@ counters.forEach((item, i) => {
 // Smooth scrolliing
 
 const smoothScrolling = (scrollLink) => {
-  const scrollLinks = document.querySelectorAll(scrollLink);
-  
-   for (const scrollLink of scrollLinks) {
-     scrollLink.addEventListener('click', event => {
-       event.preventDefault();
-       const id = scrollLink.getAttribute('href');
-       document.querySelector(id).scrollIntoView({
+    const scrollLinks = document.querySelectorAll(scrollLink);
+    
+    for (const scrollLink of scrollLinks) {
+      scrollLink.addEventListener('click', event => {
+        event.preventDefault();
+        const id = scrollLink.getAttribute('href');
+        document.querySelector(id).scrollIntoView({
           behavior: 'smooth',
           block: 'start',
           });
-     });
+      });
     }
 
+    let arrowUp = document.querySelector('.up');
+    const clientHeight = document.documentElement.clientHeight;
+    arrowUp.style.display = 'none';
 
-  let arrowUp = document.querySelector('.up');
-  const clientHeight = document.documentElement.clientHeight;
-  arrowUp.style.display = 'none';
-
-  if (document.documentElement.clientWidth < 1439) {
-      arrowUp.style.display = 'none';
-  } else {
-      arrowUp.addEventListener('click', () => {
-          document.querySelector('body').scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
+    if (document.documentElement.clientWidth < 1439) {
+        arrowUp.style.display = 'none';
+    } else {
+        arrowUp.addEventListener('click', () => {
+            document.querySelector('body').scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+            });
           });
-        });
-        
-        window.addEventListener('scroll', () => {
-          if (document.body.scrollTop > clientHeight || document.documentElement.scrollTop > clientHeight) {
-            arrowUp.style.display = 'block';
-          } else {
-            arrowUp.style.display = 'none';
-          } 
-        });
-  }
+          
+          window.addEventListener('scroll', () => {
+            if (document.body.scrollTop > clientHeight || document.documentElement.scrollTop > clientHeight) {
+              arrowUp.style.display = 'block';
+            } else {
+              arrowUp.style.display = 'none';
+            } 
+          });
+    }
+  };
 
-};
+  smoothScrolling('li>a');
 
-smoothScrolling('div>a');
-smoothScrolling('li>a');
+  // Carousel in resume
+
+  
+  $('.carousel__inner').slick({
+      speed: 800,
+      dotsClass: 'slick-dots',
+      dots: true,
+      arrows: false,
+      autoplay: true,
+      adaptiveHeight: false,
+      autoplaySpeed: 3000,
+  });
+

@@ -39,18 +39,17 @@ counters.forEach((item, i) => {
 const smoothScrolling = (scrollLink) => {
     const scrollLinks = document.querySelectorAll(scrollLink);
     
-     for (const scrollLink of scrollLinks) {
-       scrollLink.addEventListener('click', event => {
-         event.preventDefault();
-         const id = scrollLink.getAttribute('href');
-         document.querySelector(id).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-            });
-       });
-      }
+    for (const scrollLink of scrollLinks) {
+      scrollLink.addEventListener('click', event => {
+        event.preventDefault();
+        const id = scrollLink.getAttribute('href');
+        document.querySelector(id).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+          });
+      });
+    }
 
-  
     let arrowUp = document.querySelector('.up');
     const clientHeight = document.documentElement.clientHeight;
     arrowUp.style.display = 'none';
@@ -73,10 +72,20 @@ const smoothScrolling = (scrollLink) => {
             } 
           });
     }
-
-    
-   
   };
 
-  smoothScrolling('div>a');
   smoothScrolling('li>a');
+
+  // Carousel in resume
+
+  
+  $('.carousel__inner').slick({
+      speed: 800,
+      dotsClass: 'slick-dots',
+      dots: true,
+      arrows: false,
+      autoplay: true,
+      adaptiveHeight: false,
+      autoplaySpeed: 3000,
+  });
+

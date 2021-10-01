@@ -47,7 +47,7 @@
     <aside class="sidepanel scroll">
         <a href="#" class="sidepanel__link" target="_blank">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M-7.46167e-07 2.92969L-1.28061e-07 17.0703C-5.74539e-08 18.6856 1.31439 20 2.92969 20L17.0703 20C18.6856 20 20 18.6856 20 17.0703L20 11.1719L12.9297 11.1719L12.9297 13.5156L9.41406 13.5156L9.41406 11.1719L7.03125 11.1719C5.09262 11.1719 3.51562 9.59488 3.51562 7.65625L3.51562 4.10156L7.03125 4.10156L7.03125 7.65625L9.41406 7.65625L9.41406 4.10156L12.9297 4.6875L12.9297 7.65625L20 7.65625L20 2.92969C20 1.31439 18.6856 -8.16774e-07 17.0703 -7.46167e-07L2.92969 -1.28061e-07C1.31439 -5.74539e-08 -8.16774e-07 1.31439 -7.46167e-07 2.92969Z" fill="white" alt="facebook"/>
+                <path d="M-7.46167e-07 2.92969L-1.28061e-07 17.0703C-5.74539e-08 18.6856 1.31439 20 2.92969 20L17.0703 20C18.6856 20 20 18.6856 20 17.0703L20 11.1719L12.9297 11.1719L12.9297 13.5156L9.41406 13.5156L9.41406 11.1719L7.03125 11.1719C5.09262 11.1719 3.51562 9.59488 3.51562 7.65625L3.51562 4.10156L7.03125 4.10156L7.03125 7.65625L9.41406 7.65625L9.41406 4.10156L12.9297 4.6875L12.9297 7.65625L20 7.65625L20 2.92969C20 1.31439 18.6856 -8.16774e-07 17.0703 -7.46167e-07L2.92969 -1.28061e-07C1.31439 -5.74539e-08 -8.16774e-07 1.31439 -7.46167e-07 2.92969Z" fill="white"/>
             </svg>
         </a>
         <a href="#" class="sidepanel__link" target="_blank">
@@ -109,10 +109,14 @@
         <div class="container">
             <div class="title title_fz16">Меня зовут Когут Павел</div>
             <h1 class="title title_fz48 promo__title">Я web-разработчик из города Екатеринбург</h1>
-            <div class="promo__btns">
-                <a href="#portfolio" class="promo__link btn">Портфолио</a>
-                <a href="#about" class="promo__link">Про меня</a>
-            </div>
+            <ul class="promo__btns">
+                <li>
+                    <a href="#portfolio" class="promo__link btn">Портфолио</a>
+                </li>
+                <li>
+                    <a href="#about" class="promo__link">Про меня</a>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -126,12 +130,12 @@
                     <h2 class="title title_fz16 about__subtitle">Про меня</h2>
                     <div class="title title_fz36">Меня зовут Павел</div>
                     <div class="divider"></div>
-                    <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    <p class="about__text">Давайте знакомиться - я начинающий и целеустремлённый разработчик сайтов. Моё полное имя - Когут Павел Николаевич. Люблю свою девушку и хороший кофе...а ещё сладкое, много сладкого. Но нужно знать меру во всём и держать себя в форме. Также как и сайты, нужно знать что есть лишнего и оптимизировать. Оптимизация наше всё. Люблю доводить дела до конца, чтобы всё работало как нужно, быстро, красиво смотрелось, а на душе был покой.</p>
                 </div>
                 <div class="about__skills">
                     <div class="about__skills-item">
                         <div class="about__skills-circle">
-                            <img src="icons/about_me/web development.svg" alt="web-dev">
+                            <img src="icons/about_me/web_development.svg" alt="web-dev">
                         </div>
                         <div>
                             <div class="title title_fz14">
@@ -144,7 +148,7 @@
                     </div>
                     <div class="about__skills-item">
                         <div class="about__skills-circle">
-                            <img src="icons/about_me/Mobile dev.svg" alt="mobile-dev">
+                            <img src="icons/about_me/Mobile_dev.svg" alt="mobile-dev">
                         </div>
                         <div>
                             <div class="title title_fz14">
@@ -186,7 +190,7 @@
                             <div class="resume__item">
                                 <div class="resume__item-head">
                                     <div class="resume__item-icon">
-                                        <img src="icons/experience/university.svg" alt="university">
+                                        <img src="icons/experience/University.svg" alt="university">
                                     </div>
                                     <h4 class="title title_fz14">МГТУ им. Н. Э. Баумана</h4>
                                     <div class="resume__item-location">Диплом магистра | Москва (2014-2020)</div>
@@ -200,7 +204,7 @@
                             <div class="resume__item">
                                 <div class="resume__item-head">
                                     <div class="resume__item-icon">
-                                        <img src="icons/experience/courses.svg" alt="courses">
+                                        <img src="icons/experience/Courses.svg" alt="courses">
                                     </div>
                                     <h4 class="title title_fz14">Udemy</h4>
                                     <div class="resume__item-location">Курсы по Web-разработке </div>
@@ -212,7 +216,21 @@
                         </li>
                     </ul>
                 </div>
-                <div class="resume__column">
+
+                <div class="resume__column carousel">
+                    <div class="carousel__inner">
+                        <div>
+                            <img src="img/slides/slide_1.jpg" alt="slide">
+                        </div>
+                        <div>
+                            <img src="img/slides/slide_2.png" alt="slide">
+                        </div>
+                        <div>
+                            <img src="img/slides/slide_3.png" alt="slide">
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="resume__column">
                     <h3 class="title title_fz20 resume__column-title">Опыт работы</h3>
                     <ul>
                         <li>
@@ -244,7 +262,7 @@
                             </div>
                         </li>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -350,7 +368,7 @@
             <h2 class="title title_fz16 title__section-title">Портфолио</h2>
             <div class="title title_fz36">Мои работы</div>
             <div class="divider"></div>
-            <ul class="portfolio__items">
+            <aside class="portfolio__items">
                 <a href="../Uber/index.html" class="portfolio__item" target="_blank">
                     <img src="img/works/uber.jpg" alt="uber">
                 </a>
@@ -369,7 +387,7 @@
                 <a href="../Electric/index.html" class="portfolio__item horizontal" target="_blank">
                     <img src="img/works/electric.jpg" alt="electric">
                 </a>
-            </ul>
+            </aside>
         </div>
     </section>
 
@@ -380,7 +398,7 @@
             <div class="price__wrapper">
                 <div class="price__item">
                     <h3 class="price__item-title title_fz14">Landing-page</h3>
-                    <div class="price__item-value">от 8000 руб.</div>
+                    <div class="price__item-value">от 3000 руб.</div>
                     <div class="price__item-descr">Одностраничный сайт для презентации услуг/товаров/...</div>
                 </div>
                 <div class="price__item">
@@ -426,17 +444,17 @@
                     <div class="title title_fz14 contacts__text">
                         Любым удобным для вас способом:
                     </div>
-                    <ul class="contacts__social">
+                    <div class="contacts__social">                 
                         <a href="#" class="contacts__link" target="_blank">
                             <img src="icons/social/Facebook_.svg" alt="facebook">
-                        </a>
+                        </a>          
                         <a href="https://t.me/Senior_Pelmeshka" class="contacts__link" target="_blank">
                             <img src="icons/social/Telegram.svg" alt="telegram">
-                        </a>
+                        </a>              
                         <a href="#" class="contacts__link" target="_blank">
                             <img src="icons/social/Instagram_.svg" alt="instagram">
-                        </a>
-                    </ul>
+                        </a>                        
+                    </div>
                     <div class="title title_fz14 contacts__text">
                         Или оставьте ваши данные и я сам вам напишу:
                     </div>
@@ -469,16 +487,18 @@
         </div>
     </section>
 
-    <!-- <img src="icons/up-arrow.svg" alt="up" class="up"> -->
-    <div alt="Наверх" class="up">
+    <div class="up">
         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 490.667 490.667" style="enable-background:new 0 0 490.667 490.667;" xml:space="preserve">
+	    viewBox="0 0 490.667 490.667" style="enable-background:new 0 0 490.667 490.667;" xml:space="preserve">
         <path d="M267.968,82.219c-12.496-12.492-32.752-12.492-45.248,0L104.533,200.533
             c-18.889,18.894-18.889,49.522,0,68.416c19.139,18.289,49.277,18.289,68.416,0l19.2-19.2v123.584
             c0,29.455,23.878,53.333,53.333,53.333c29.455,0,53.333-23.878,53.333-53.333V249.749l19.2,19.2
             c19.139,18.289,49.277,18.289,68.416,0c18.889-18.894,18.889-49.522,0-68.416L267.968,82.219z"/>
         </svg>
     </div>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

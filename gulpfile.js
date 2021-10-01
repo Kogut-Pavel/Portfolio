@@ -15,9 +15,9 @@ gulp.task('server', function() {
             baseDir: "./dist/",
             serveStaticOptions: {
             extensions: ["html"]
-        }
-    },
-});
+            },
+        },
+    });
 
     gulp.watch("src/*.html").on('change', browserSync.reload);
 });

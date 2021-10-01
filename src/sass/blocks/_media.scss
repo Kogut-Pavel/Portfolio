@@ -192,9 +192,14 @@
     .resume {
         padding-top: 40px;
         &__wrapper {
-            grid-template-columns: 1fr;
+            grid-template-columns: 540px;
             gap: 40px;
             padding: 40px 0px;
+        }
+        .carousel {
+            &__inner {
+                margin: 0 auto;
+            }
         }
     }
     .skills {
@@ -271,6 +276,19 @@
         &__skills {
             grid-template-columns: 1fr;
             justify-items: center;
+        }
+    }
+    .resume {
+        &__wrapper {
+            grid-template-columns: 300px;
+            justify-content: center;
+        }
+        .carousel {
+            &__inner {
+                img {
+                    max-height: 300px;
+                }
+            }
         }
     }
     .skills {
