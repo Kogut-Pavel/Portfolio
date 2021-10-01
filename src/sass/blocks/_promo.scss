@@ -20,6 +20,9 @@
         align-items: center;
         justify-content: space-between;
         width: 250px;
+        li {
+            list-style-type: none;
+        }
     }
     &__link {
         color: #fff;

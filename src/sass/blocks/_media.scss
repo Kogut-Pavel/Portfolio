@@ -283,13 +283,6 @@
             grid-template-columns: 300px;
             justify-content: center;
         }
-        .carousel {
-            &__inner {
-                img {
-                    max-height: 300px;
-                }
-            }
-        }
     }
     .skills {
         padding-top: 10px;
