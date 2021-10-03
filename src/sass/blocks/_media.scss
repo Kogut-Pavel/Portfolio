@@ -2,9 +2,6 @@
     .sidepanel {
         display: none;
     }
-    // .up {
-    //     display: none !important; 
-    // }
 }
 
 @media (max-width: 1200px) {
@@ -230,7 +227,7 @@
     }
     .contacts {
         padding-bottom: 50px;
-        padding-top: 0;
+        padding-top: 40px;
         &__form {
             grid-template: 45px 190px 45px / repeat(2, 200px);
             column-gap: 30px;
