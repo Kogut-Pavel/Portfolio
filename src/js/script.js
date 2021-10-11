@@ -89,3 +89,26 @@ const smoothScrolling = (scrollLink) => {
       autoplaySpeed: 3000,
   });
 
+  // mailer
+
+  $('.modal__close').on('click', function() {
+    $('.overlay, .modal').fadeOut('slow');
+  });
+
+
+$('form').submit(function(e) {
+  e.preventDefault();
+  $.ajax({
+    type: 'POST',
+    url: 'mailer/smart.php',
+    data: $(this).serialize()
+  }).done(function() {
+      $(this).find('input').val('');
+      $('.overlay, .modal-good').fadeIn('slow');
+      $('form').trigger('reset');
+  });
+  return false;
+});
+
+
+
