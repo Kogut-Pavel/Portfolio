@@ -1,0 +1,33 @@
+@import "vars";
+@import "mixins";
+@import "./vendor/reset";
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1.4rem;
+    line-height: 1.5;
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* Blocks */
+
