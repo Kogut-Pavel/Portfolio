@@ -376,13 +376,113 @@ body {
     box-sizing: border-box;
 }
 
+.main {
+    background: #E0E0E0;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
 a {
     color: inherit;
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
+/* Blocks */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url("../images/bg/hero-bg.png") no-repeat center/cover;
+    color: #fff;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
-/* Blocks */
+.hero__title {
+    font-size: 5.6rem;
+    margin-bottom: 2.5rem;
+}
+
+.hero__subtitle {
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 150%;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.hero__arrow {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.title {
+    font-weight: bold;
+    line-height: 130%;
+    text-align: center;
+}
+
+.title.fz46 {
+    font-size: 4.6rem;
+}
+
+.portfolio {
+    padding: 8rem 0 12rem 0;
+}
+
+.portfolio__wrapper {
+    margin-top: 7rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    gap: 3rem;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.portfolio__item {
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.35);
+    cursor: pointer;
+    transition: -webkit-transform .2s linear;
+    transition: transform .2s linear;
+    transition: transform .2s linear, -webkit-transform .2s linear;
+}
+
+.portfolio__item:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.portfolio__item-image {
+    margin-bottom: 2rem;
+}
+
+.portfolio__item-title {
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 130%;
+    margin-bottom: 1.3rem;
+}
+
+.portfolio__item-descr {
+    font-size: 1.6rem;
+    line-height: 130%;
+}

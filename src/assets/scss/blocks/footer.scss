@@ -1,0 +1,61 @@
+.footer {
+    padding: 4.5rem 0 12rem 0;
+
+    background: $primary;
+    
+    color: $white;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+    }
+
+    &__copyright {
+        font-weight: bold;
+        font-size: 2.8rem;
+        line-height: 130%;
+
+        &-text {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__social {
+
+        font-weight: 600;
+        font-size: 1.6rem;
+        margin-top: 1rem;
+
+        &-list {
+            display: flex;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+        &-item {
+            margin-right: 4rem;
+        }
+    }
+
+    &__connect {
+        max-width: 34rem;
+
+        &-link {
+            transition: all .2s linear;
+            &:hover {
+                color: lighten($secondary, 20%);
+                border-color: lighten($secondary, 20%);
+            }
+        }
+
+        &-text {
+            margin-top: 1.5rem;
+
+            font-size: 16px;
+            color: #7E9EC9;
+            line-height: 130%;
+        }
+    }
+
+}

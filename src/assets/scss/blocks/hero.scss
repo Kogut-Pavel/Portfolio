@@ -1,0 +1,32 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url("../images/bg/hero-bg.png") no-repeat center / cover;
+    color: $white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    &__title {
+        font-size: 5.6rem;
+        margin-bottom: 2.5rem;
+    }
+
+    &__subtitle {
+        font-weight: bold;
+        font-size: 1.6rem;
+        line-height: 150%;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__arrow {
+        position: absolute;
+        bottom: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
