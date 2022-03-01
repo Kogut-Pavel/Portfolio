@@ -12,6 +12,10 @@
     &__title {
         font-size: 5.6rem;
         margin-bottom: 2.5rem;
+
+        @include breakpoint($mobile-bp) {
+            font-size: 3.2rem;
+        }
     }
 
     &__subtitle {
@@ -21,6 +25,9 @@
         letter-spacing: 0.2em;
         text-transform: uppercase;
         text-align: center;
+        @include breakpoint($mobile-bp) {
+            font-size: 1.4rem;
+        }
     }
 
     &__arrow {
@@ -28,5 +35,8 @@
         bottom: 3rem;
         left: 50%;
         transform: translateX(-50%);
+        @include breakpoint($mobile-bp) {
+            bottom: 1.5rem;
+        }
     }
 }

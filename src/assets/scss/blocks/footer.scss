@@ -1,51 +1,103 @@
 .footer {
-    padding: 4.5rem 0 12rem 0;
-
+    padding: 4.5rem 0 10rem 0;
     background: $primary;
-    
     color: $white;
+
+    
+    @include breakpoint($middle-bp) {
+        padding: 4rem 0 6rem 0;
+    }
 
     &__wrapper {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
 
+        @include breakpoint($tablet-bp) {
+            flex-direction: column-reverse;
+        }
+        @include breakpoint($middle-bp) {
+            align-items: center;
+            text-align: center;
+        }
     }
 
     &__copyright {
         font-weight: bold;
         font-size: 2.8rem;
         line-height: 130%;
+        margin-right: 3rem;
+        color: #7E9EC9;
+
+        @include breakpoint($middle-bp) {
+            font-size: 1.8rem;
+            margin-right: 0;
+        }
 
         &-text {
             font-size: 1.8rem;
+
+            @include breakpoint($middle-bp) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    &__media {
+        display: flex;
+        @include breakpoint($tablet-bp) {
+            justify-content: space-between;
+        }
+        @include breakpoint($middle-bp) {
+            flex-direction: column-reverse;
         }
     }
 
     &__social {
-
         font-weight: 600;
         font-size: 1.6rem;
         margin-top: 1rem;
+        margin-right: 3rem;
+
+        @include breakpoint($tablet-bp) {
+            margin: 0;
+        }
+
+        @include breakpoint($middle-bp) {
+            margin-bottom: 5rem;
+            font-size: 1.4rem;
+        }
 
         &-list {
             display: flex;
             align-items: center;
             margin-top: 1.5rem;
+
+            @include breakpoint($middle-bp) {
+                justify-content: center;
+            }
         }
         &-item {
             margin-right: 4rem;
+
+            @include breakpoint($middle-bp) {
+                margin-left: 2rem;
+                margin-right: 2rem;
+            }
         }
     }
 
     &__connect {
         max-width: 34rem;
 
-        &-link {
+        @include breakpoint($middle-bp) {
+            margin-bottom: 5rem;
+        }
+
+        &-link {      
             transition: all .2s linear;
             &:hover {
-                color: lighten($secondary, 20%);
-                border-color: lighten($secondary, 20%);
+                color: $primary;
+                background: $white;
             }
         }
 
@@ -55,6 +107,10 @@
             font-size: 16px;
             color: #7E9EC9;
             line-height: 130%;
+
+            @include breakpoint($middle-bp) {
+                font-size: 1.4rem;
+            }
         }
     }
 

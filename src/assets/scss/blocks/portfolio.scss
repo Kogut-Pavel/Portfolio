@@ -1,29 +1,66 @@
 .portfolio {
     padding: 8rem 0 12rem 0;
 
+    @include breakpoint($middle-bp) {
+        padding: 4rem 0 6rem 0;
+
+        .title {
+            font-size: 3.2rem;
+        }
+    }
+
     &__wrapper {
         margin-top: 7rem;
         display: flex;
         align-items: center;
-        justify-content: space-between;
         gap: 3rem;
         flex-wrap: wrap;
+
+        
+        @include breakpoint($middle-bp) {
+            flex-wrap: unset;
+            flex-direction: column;
+            margin-top: 3rem;
+        }
     }
 
-    &__item {
-        padding: 2rem;
+    &__card {
+
         background-color: $white;
-        box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.35);
-        cursor: pointer;
+        box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.35);      
+        
+        max-width: 540px;
         transition: all .2s linear;
+        width: 100%;
 
         &:hover {
             transform: scale(1.05);
             color: darken($secondary, 10%);
         }
 
+        @include breakpoint($tablet-bp) {
+            width: calc(50% - 1.5rem);
+        }
+  
+        @include breakpoint($middle-bp) {
+            width: 100%;
+        }
+
+        &-link {
+            display: block;
+            padding: 2rem;
+            @include breakpoint($mobile-bp) {
+                padding: 1.5rem;
+            }
+        }
+
         &-image {
-            margin-bottom: 2rem;    
+            margin-bottom: 2rem;
+            width: 100%;
+            
+            @include breakpoint($middle-bp) {
+                margin-bottom: 1rem;
+            }
         }
 
         &-title {
@@ -31,12 +68,20 @@
             font-size: 2.4rem;
             line-height: 130%;
             margin-bottom: 1.3rem;
+
+            @include breakpoint($mobile-bp) {
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+            }
         }
 
         &-descr {
             font-size: 1.6rem;
             line-height: 130%;
+
+            @include breakpoint($mobile-bp) {
+                font-size: 1.4rem;
+            }
         }
     }
-
 }

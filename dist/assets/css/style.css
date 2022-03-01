@@ -362,12 +362,12 @@ textarea {
 
 html {
     font-size: 62.5%;
+    line-height: 130%;
 }
 
 body {
     font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     font-size: 1.4rem;
-    line-height: 1.5;
 }
 
 *,
@@ -381,9 +381,13 @@ body {
 }
 
 .container {
-    width: 1140px;
+    max-width: 1140px;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+img {
+    max-width: 100%;
 }
 
 a {
@@ -412,6 +416,12 @@ a {
     margin-bottom: 2.5rem;
 }
 
+@media (max-width: 575px) {
+    .hero__title {
+        font-size: 3.2rem;
+    }
+}
+
 .hero__subtitle {
     font-weight: bold;
     font-size: 1.6rem;
@@ -421,12 +431,24 @@ a {
     text-align: center;
 }
 
+@media (max-width: 575px) {
+    .hero__subtitle {
+        font-size: 1.4rem;
+    }
+}
+
 .hero__arrow {
     position: absolute;
     bottom: 3rem;
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
+}
+
+@media (max-width: 575px) {
+    .hero__arrow {
+        bottom: 1.5rem;
+    }
 }
 
 .title {
@@ -443,46 +465,178 @@ a {
     padding: 8rem 0 12rem 0;
 }
 
+@media (max-width: 768px) {
+    .portfolio {
+        padding: 4rem 0 6rem 0;
+    }
+
+    .portfolio .title {
+        font-size: 3.2rem;
+    }
+}
+
 .portfolio__wrapper {
     margin-top: 7rem;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
     align-items: center;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
     gap: 3rem;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
-.portfolio__item {
-    padding: 2rem;
+@media (max-width: 768px) {
+    .portfolio__wrapper {
+        -ms-flex-wrap: unset;
+        flex-wrap: unset;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-top: 3rem;
+    }
+}
+
+.portfolio__card {
     background-color: #fff;
     box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.35);
-    cursor: pointer;
-    transition: -webkit-transform .2s linear;
-    transition: transform .2s linear;
-    transition: transform .2s linear, -webkit-transform .2s linear;
+    max-width: 540px;
+    transition: all .2s linear;
+    width: 100%;
 }
 
-.portfolio__item:hover {
+.portfolio__card:hover {
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
+    color: #1244ce;
 }
 
-.portfolio__item-image {
+@media (max-width: 1160px) {
+    .portfolio__card {
+        width: calc(50% - 1.5rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio__card {
+        width: 100%;
+    }
+}
+
+.portfolio__card-link {
+    display: block;
+    padding: 2rem;
+}
+
+@media (max-width: 575px) {
+    .portfolio__card-link {
+        padding: 1.5rem;
+    }
+}
+
+.portfolio__card-image {
     margin-bottom: 2rem;
+    width: 100%;
 }
 
-.portfolio__item-title {
+@media (max-width: 768px) {
+    .portfolio__card-image {
+        margin-bottom: 1rem;
+    }
+}
+
+.portfolio__card-title {
     font-weight: 600;
     font-size: 2.4rem;
     line-height: 130%;
     margin-bottom: 1.3rem;
 }
 
-.portfolio__item-descr {
+@media (max-width: 575px) {
+    .portfolio__card-title {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.portfolio__card-descr {
     font-size: 1.6rem;
     line-height: 130%;
+}
+
+@media (max-width: 575px) {
+    .portfolio__card-descr {
+        font-size: 1.4rem;
+    }
+}
+
+.footer {
+    padding: 4.5rem 0 12rem 0;
+    background: #1E4776;
+    color: #fff;
+}
+
+.footer__wrapper {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.footer__copyright {
+    font-weight: bold;
+    font-size: 2.8rem;
+    line-height: 130%;
+    margin-right: 3rem;
+}
+
+.footer__copyright-text {
+    font-size: 1.8rem;
+}
+
+.footer__social {
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    margin-right: 3rem;
+}
+
+.footer__social-list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.footer__social-item {
+    margin-right: 4rem;
+}
+
+.footer__connect {
+    max-width: 34rem;
+    margin-right: auto;
+}
+
+.footer__connect-link {
+    transition: all .2s linear;
+}
+
+.footer__connect-link:hover {
+    color: #1E4776;
+    background: #fff;
+}
+
+.footer__connect-text {
+    margin-top: 1.5rem;
+    font-size: 16px;
+    color: #7E9EC9;
+    line-height: 130%;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    border: 3px solid #FFFFFF;
+    border-radius: 5rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+    text-transform: uppercase;
 }
