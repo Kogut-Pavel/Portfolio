@@ -3,7 +3,6 @@
     background: $primary;
     color: $white;
 
-    
     @include breakpoint($middle-bp) {
         padding: 4rem 0 6rem 0;
     }
@@ -78,10 +77,22 @@
         }
         &-item {
             margin-right: 4rem;
-
+            
             @include breakpoint($middle-bp) {
                 margin-left: 2rem;
                 margin-right: 2rem;
+            }
+        
+            &:first-child {
+                @include breakpoint($middle-bp) {
+                    margin-left: 0;
+                }            
+            }
+
+            &:last-child {
+                @include breakpoint($middle-bp) {
+                    margin-right: 0;
+                }
             }
         }
     }
@@ -113,5 +124,4 @@
             }
         }
     }
-
 }

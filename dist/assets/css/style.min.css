@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
@@ -337,9 +338,6 @@ body {
 *::after {
   box-sizing: border-box; }
 
-.main {
-  background: #E0E0E0; }
-
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -367,7 +365,8 @@ a {
     margin-bottom: 2.5rem; }
     @media (max-width: 575px) {
       .hero__title {
-        font-size: 3.2rem; } }
+        font-size: 3.2rem;
+        margin-bottom: 1.5rem; } }
   .hero__subtitle {
     font-weight: bold;
     font-size: 1.6rem;
@@ -391,7 +390,7 @@ a {
   font-weight: bold;
   line-height: 130%;
   text-align: center; }
-  .title.fz46 {
+  .title-fz46 {
     font-size: 4.6rem; }
 
 .portfolio {
@@ -520,6 +519,12 @@ a {
         .footer__social-item {
           margin-left: 2rem;
           margin-right: 2rem; } }
+      @media (max-width: 768px) {
+        .footer__social-item:first-child {
+          margin-left: 0; } }
+      @media (max-width: 768px) {
+        .footer__social-item:last-child {
+          margin-right: 0; } }
   .footer__connect {
     max-width: 34rem; }
     @media (max-width: 768px) {
@@ -547,3 +552,56 @@ a {
   font-weight: bold;
   font-size: 1.6rem;
   text-transform: uppercase; }
+  .btn--back {
+    padding: 2rem 3rem;
+    color: #275BEC;
+    border-color: #275BEC; }
+
+.work {
+  padding: 8rem 0 12rem 0; }
+  @media (max-width: 768px) {
+    .work {
+      padding: 4rem 0 6rem 0; } }
+  .work__title {
+    margin-bottom: 4rem; }
+    @media (max-width: 768px) {
+      .work__title {
+        font-size: 2.8rem; } }
+  .work__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 16px;
+    line-height: 150%; }
+  .work__img {
+    margin-bottom: 7rem; }
+    @media (max-width: 768px) {
+      .work__img {
+        margin-bottom: 2rem; } }
+  .work__descr {
+    max-width: 730px;
+    margin-bottom: 1.5rem;
+    text-align: center; }
+  .work__link {
+    margin-bottom: 6rem; }
+    @media (max-width: 768px) {
+      .work__link {
+        margin-bottom: 5rem; } }
+    .work__link a {
+      color: #275BEC; }
+      .work__link a:hover {
+        text-decoration: underline; }
+  .work__btn {
+    position: relative;
+    padding-left: 5rem;
+    transition: all .2s linear; }
+    .work__btn::before {
+      content: '←';
+      font-size: 3rem;
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-60%); }
+    .work__btn:hover {
+      background: #275BEC;
+      color: #fff; }

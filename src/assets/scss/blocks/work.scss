@@ -1,0 +1,71 @@
+.work {
+    padding: 8rem 0 12rem 0;
+
+    @include breakpoint($middle-bp) {
+        padding: 4rem 0 6rem 0;
+    }
+
+    &__title {
+        margin-bottom: 4rem;
+
+        @include breakpoint($middle-bp) {
+            font-size: 2.8rem;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    &__img {
+        margin-bottom: 7rem;
+
+        @include breakpoint($middle-bp) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__descr {
+        max-width: 730px;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    &__link {
+        margin-bottom: 6rem;
+
+        @include breakpoint($middle-bp) {
+            margin-bottom: 5rem;
+        }
+
+        a {
+            color: $secondary;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__btn {
+        position: relative;
+        padding-left: 5rem;
+        transition: all .2s linear;
+        &::before {
+            content: '←';
+            font-size: 3rem;
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-60%);
+        }
+
+        &:hover {
+            background: $secondary;
+            color: $white;
+        }
+    }
+}

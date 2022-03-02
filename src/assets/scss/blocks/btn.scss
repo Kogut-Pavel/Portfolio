@@ -8,4 +8,10 @@
     font-weight: bold;
     font-size: 1.6rem; 
     text-transform: uppercase;
+
+    &--back {
+        padding: 2rem 3rem;
+        color: $secondary;
+        border-color: $secondary;
+    }
 }
