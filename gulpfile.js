@@ -46,7 +46,7 @@ const path = {
         fonts:  srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
     },
     clean: "./" + distPath
-}
+};
 
 
 
@@ -74,7 +74,7 @@ function html(cb) {
         .pipe(dest(path.build.html))
         .pipe(browserSync.reload({stream: true}));
 
-    cb();
+    
 }
 
 function css(cb) {
@@ -110,7 +110,7 @@ function css(cb) {
         .pipe(dest(path.build.css))
         .pipe(browserSync.reload({stream: true}));
 
-    cb();
+    
 }
 
 function cssWatch(cb) {
@@ -134,7 +134,7 @@ function cssWatch(cb) {
         .pipe(dest(path.build.css))
         .pipe(browserSync.reload({stream: true}));
 
-    cb();
+    
 }
 
 function js(cb) {
@@ -169,7 +169,7 @@ function js(cb) {
         .pipe(dest(path.build.js))
         .pipe(browserSync.reload({stream: true}));
 
-    cb();
+    
 }
 
 function jsWatch(cb) {
@@ -192,7 +192,7 @@ function jsWatch(cb) {
         .pipe(dest(path.build.js))
         .pipe(browserSync.reload({stream: true}));
 
-    cb();
+    
 }
 
 function images(cb) {
@@ -211,7 +211,7 @@ function images(cb) {
         .pipe(dest(path.build.images))
         .pipe(browserSync.reload({stream: true}));
 
-    cb();
+   
 }
 
 function fonts(cb) {
@@ -219,13 +219,13 @@ function fonts(cb) {
         .pipe(dest(path.build.fonts))
         .pipe(browserSync.reload({stream: true}));
 
-    cb();
+   
 }
 
 function clean(cb) {
     return del(path.clean);
 
-    cb();
+    
 }
 
 function watchFiles() {

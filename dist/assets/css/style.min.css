@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
@@ -327,7 +326,8 @@ textarea {
 
 html {
   font-size: 62.5%;
-  line-height: 130%; }
+  line-height: 130%;
+  scroll-behavior: smooth; }
 
 body {
   font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
@@ -373,7 +373,8 @@ a {
     line-height: 150%;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    text-align: center; }
+    text-align: center;
+    animation-delay: 0.6s; }
     @media (max-width: 575px) {
       .hero__subtitle {
         font-size: 1.4rem; } }
@@ -414,12 +415,16 @@ a {
   .portfolio__card {
     background-color: #fff;
     box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.35);
+    color: #000;
     max-width: 540px;
     transition: all .2s linear;
-    width: 100%; }
+    width: 100%;
+    animation-delay: .4s; }
     .portfolio__card:hover {
-      transform: scale(1.05);
-      color: #1244ce; }
+      transform: scale(1.05); }
+      @media (max-width: 768px) {
+        .portfolio__card:hover {
+          transform: scale(1); } }
     @media (max-width: 1160px) {
       .portfolio__card {
         width: calc(50% - 1.5rem); } }
@@ -429,6 +434,11 @@ a {
     .portfolio__card-link {
       display: block;
       padding: 2rem; }
+      .portfolio__card-link:hover {
+        color: #1244ce; }
+        @media (max-width: 768px) {
+          .portfolio__card-link:hover {
+            color: inherit; } }
       @media (max-width: 575px) {
         .portfolio__card-link {
           padding: 1.5rem; } }
@@ -526,10 +536,12 @@ a {
         .footer__social-item:last-child {
           margin-right: 0; } }
   .footer__connect {
-    max-width: 34rem; }
+    max-width: 34rem;
+    margin-left: 2rem; }
     @media (max-width: 768px) {
       .footer__connect {
-        margin-bottom: 5rem; } }
+        margin-bottom: 5rem;
+        margin-left: 0; } }
     .footer__connect-link {
       transition: all .2s linear; }
       .footer__connect-link:hover {
@@ -592,16 +604,8 @@ a {
       .work__link a:hover {
         text-decoration: underline; }
   .work__btn {
-    position: relative;
-    padding-left: 5rem;
+    padding-left: 2rem;
     transition: all .2s linear; }
-    .work__btn::before {
-      content: '←';
-      font-size: 3rem;
-      position: absolute;
-      top: 50%;
-      left: 15px;
-      transform: translateY(-60%); }
     .work__btn:hover {
       background: #275BEC;
       color: #fff; }

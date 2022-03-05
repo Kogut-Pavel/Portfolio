@@ -51,17 +51,8 @@
     }
 
     &__btn {
-        position: relative;
-        padding-left: 5rem;
+        padding-left: 2rem;
         transition: all .2s linear;
-        &::before {
-            content: '←';
-            font-size: 3rem;
-            position: absolute;
-            top: 50%;
-            left: 15px;
-            transform: translateY(-60%);
-        }
 
         &:hover {
             background: $secondary;

@@ -99,9 +99,11 @@
 
     &__connect {
         max-width: 34rem;
+        margin-left: 2rem;
 
         @include breakpoint($middle-bp) {
             margin-bottom: 5rem;
+            margin-left: 0;
         }
 
         &-link {      

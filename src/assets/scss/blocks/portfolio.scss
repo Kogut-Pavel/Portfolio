@@ -25,17 +25,20 @@
     }
 
     &__card {
-
         background-color: $white;
         box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.35);      
-        
+        color: $black;
         max-width: 540px;
         transition: all .2s linear;
         width: 100%;
+        animation-delay: .4s;
 
         &:hover {
             transform: scale(1.05);
-            color: darken($secondary, 10%);
+
+            @include breakpoint($middle-bp) {
+                transform: scale(1);
+            }
         }
 
         @include breakpoint($tablet-bp) {
@@ -49,6 +52,14 @@
         &-link {
             display: block;
             padding: 2rem;
+
+            &:hover {
+                color: darken($secondary, 10%);
+                @include breakpoint($middle-bp) {
+                    color: inherit;
+                }
+            }
+
             @include breakpoint($mobile-bp) {
                 padding: 1.5rem;
             }
