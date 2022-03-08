@@ -1,8 +1,8 @@
 {
-    "name": "brainscloud",
+    "name": "Pavel Kogut",
     "version": "1.0.0",
-    "description": "brainscloud",
-    "author": "brainscloud",
+    "description": "Pavel Kogut",
+    "author": "Pavel Kogut",
     "devDependencies": {
         "@babel/core": "^7.12.3",
         "@babel/preset-env": "^7.12.1",
