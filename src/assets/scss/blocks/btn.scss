@@ -14,4 +14,46 @@
         color: $secondary;
         border-color: $secondary;
     }
+
+    &--more {
+        display: flex;
+        align-items: center;
+        margin: 3rem auto 0 auto;
+        text-transform: none;
+        background: transparent;
+        color: $secondary;
+        border-color: $secondary;
+        transition: all .2s ease-in;
+
+        img {
+            width: 2rem;
+            transform: rotate(-90deg);
+            margin-left: 1rem;
+        }
+
+        &:hover {
+            background: $secondary;
+            color: $white;
+        }
+    }
+
+    .load-more {
+        animation: rotate 1s;
+    }
+
+    @keyframes rotate {
+        100% {
+            transform: rotate(90deg);
+        }
+    }
+
+    .load-more-back {
+        animation: rotate-back 1s;
+    }
+
+    @keyframes rotate-back {
+        100% {
+            transform: rotate(-90deg);
+        }
+    }
 }

@@ -26,12 +26,16 @@
 
     &__card {
         background-color: $white;
-        box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.35);      
+        box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.35);
         color: $black;
         max-width: 540px;
         transition: all .2s linear;
         width: 100%;
         animation-delay: .4s;
+
+        &--hidden {
+            display: none;
+        }
 
         &:hover {
             transform: scale(1.05);

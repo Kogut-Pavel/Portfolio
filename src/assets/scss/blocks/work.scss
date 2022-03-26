@@ -28,6 +28,10 @@
         @include breakpoint($middle-bp) {
             margin-bottom: 2rem;
         }
+
+        &--shadow {
+            box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.35);
+        }
     }
 
     &__descr {

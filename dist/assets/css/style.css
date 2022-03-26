@@ -4753,6 +4753,10 @@ a {
     animation-delay: .4s;
 }
 
+.portfolio__card--hidden {
+    display: none;
+}
+
 .portfolio__card:hover {
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
@@ -5030,6 +5034,69 @@ a {
     border-color: #275BEC;
 }
 
+.btn--more {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 3rem auto 0 auto;
+    text-transform: none;
+    background: transparent;
+    color: #275BEC;
+    border-color: #275BEC;
+    transition: all .2s ease-in;
+}
+
+.btn--more img {
+    width: 2rem;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    margin-left: 1rem;
+}
+
+.btn--more:hover {
+    background: #275BEC;
+    color: #fff;
+}
+
+.btn .load-more {
+    -webkit-animation: rotate 1s;
+    animation: rotate 1s;
+}
+
+@-webkit-keyframes rotate {
+    100% {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes rotate {
+    100% {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+}
+
+.btn .load-more-back {
+    -webkit-animation: rotate-back 1s;
+    animation: rotate-back 1s;
+}
+
+@-webkit-keyframes rotate-back {
+    100% {
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
+}
+
+@keyframes rotate-back {
+    100% {
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
+}
+
 .work {
     padding: 8rem 0 12rem 0;
 }
@@ -5070,6 +5137,10 @@ a {
     .work__img {
         margin-bottom: 2rem;
     }
+}
+
+.work__img--shadow {
+    box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.35);
 }
 
 .work__descr {
