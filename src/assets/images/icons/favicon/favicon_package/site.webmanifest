@@ -1,0 +1,19 @@
+{
+    "name": "Kogut Pavel web-dev",
+    "short_name": "Kogut Pavel web-dev",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#1e4776",
+    "background_color": "#1e4776",
+    "display": "standalone"
+}
