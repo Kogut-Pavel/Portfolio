@@ -34,7 +34,13 @@
         &:hover {
             background: $secondary;
             color: $white;
+
+            @include breakpoint($middle-bp) {
+                background: transparent;
+                color: $secondary;
+            }
         }
+
     }
 
     .load-more {

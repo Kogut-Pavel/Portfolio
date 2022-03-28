@@ -8,20 +8,19 @@ const text = document.getElementById('text');
 const btnMoreIcon = document.querySelector('.btn--more-icon');
 const portfolioCardHidden = document.querySelectorAll('.portfolio__card--hidden');
 
-btnMore.addEventListener('click', () => {
-   if (btnMoreIcon.classList.contains('load-more')) {
-
-      addRotateIcon('load-more', 'load-more-back');
-      timeout('Показать еще', -90);
-      showHiddenCards();
-   } else {
-
-      addRotateIcon('load-more-back', 'load-more');
-      timeout('Скрыть', 90);
-      showHiddenCards();
-   }
-
-});
+if (btnMore) {
+   btnMore.addEventListener('click', function() {
+      if (btnMoreIcon.classList.contains('load-more')) {
+         addRotateIcon('load-more', 'load-more-back');
+         timeout('Показать еще', -90);
+         showHiddenCards();
+      } else {
+         addRotateIcon('load-more-back', 'load-more');
+         timeout('Скрыть', 90);
+         showHiddenCards();
+      }
+   });
+}
 
 function addRotateIcon(more, back) {
    btnMoreIcon.classList.remove(more);
